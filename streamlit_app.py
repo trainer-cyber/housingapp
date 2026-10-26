@@ -11,6 +11,6 @@ occup = st.number_input('Average Occupancy', 0.5, 10.0, 3.0)
 lat = st.number_input('Latitude', 32.0, 42.0, 34.0)
 lon = st.number_input('Longitude', -125.0, -114.0, -118.0)
 if st.button('Estimate Price'):
-row = [med_inc, house_age, rooms, bedrooms, population, occup, lat, lon]
-price = model.predict([row])[0]
+  row = [med_inc, house_age, rooms, bedrooms, population, occup, lat, lon]
+  price = model.predict([row])[0]
 st.success(f'Estimated Median House Value: ${price*100000:,.0f}')
